@@ -1,0 +1,20 @@
+﻿[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learner-geometry"
+version = "0.1.0"
+description = "Where on the solution set a learner lands: the alignment-fraction / evaluation-point law, verified on real networks"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0", "numpy", "scipy"]
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.optional-dependencies]
+notebooks = ["jupyter", "nbconvert", "matplotlib"]
+
+[tool.setuptools]
+package-dir = { "" = "lib" }
+py-modules = ["tcr", "tcr2", "tcr3", "tcr4", "tcr6", "tcr7", "part8lib", "part9lib", "common9", "loc",
+              "spec11_common", "spec12_common"]
